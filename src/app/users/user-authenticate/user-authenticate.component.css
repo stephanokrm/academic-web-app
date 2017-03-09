@@ -1,0 +1,41 @@
+h1 {
+	font-weight: 700;
+    line-height: .52;
+}
+
+h2 {
+	font-size: 1.6em;
+    font-weight: 400;
+}
+
+.row-margin-top {
+	margin-top: 50px;
+}
+
+.bnt-social {
+	min-width: 200px;
+}
+
+.btn-facebook {
+	background-color: #3B5998;
+}
+
+.btn-google {
+	background-color: #EA4335;
+}
+
+@media screen and (max-width: 600px) {
+	h1 {
+	    font-size: 4em;
+	}
+}
+
+@media screen and (min-width: 601px) and (max-width: 992px) {
+
+}
+
+@media screen and (min-width: 993px) {
+	h1 {
+	    font-size: 12em;
+	}
+}

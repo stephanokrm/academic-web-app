@@ -1,10 +1,10 @@
-import { AppAcaPage } from './app.po';
+import { AcademicPage } from './app.po';
 
-describe('app-aca App', () => {
-  let page: AppAcaPage;
+describe('academic App', () => {
+  let page: AcademicPage;
 
   beforeEach(() => {
-    page = new AppAcaPage();
+    page = new AcademicPage();
   });
 
   it('should display message saying app works', () => {
