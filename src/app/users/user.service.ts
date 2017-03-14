@@ -20,14 +20,13 @@ export class UserService {
     }
 
     store(user: User) {
-        return this.httpService.post(Env.API + 'api/store', user)
+        return this.httpService.post(Env.API + 'api/user/store', user)
             .map(response => response.json())
             .catch(this.handleError);
     }
 
     handleError(error: Response | any) {
-        console.log(error);
-        return Observable.throw('Whoops! Ocorreu algum erro.');
+        return Observable.throw(error.json());
     }
 
 }

@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/materialize-css/dist/css/materialize.min.css";
+
+.btn-large {
+    font-family: circular, sans-serif !important;
+    text-transform: none !important;
+    font-size: 1.4em !important;
+    border-radius: 4px !important;
+    -webkit-box-shadow: 0 0 16px rgba(0,0,0,.16) !important;
+    -moz-box-shadow: 0 0 16px rgba(0,0,0,.16) !important;
+    box-shadow: 0 0 16px rgba(0,0,0,.16) !important;
+}
+
+.btn-large:hover {
+    -webkit-box-shadow: 0 0 16px rgba(0,0,0,.25) !important;
+    -moz-box-shadow: 0 0 16px rgba(0,0,0,.25) !important;
+    box-shadow: 0 0 16px rgba(0,0,0,.25) !important;
+}
+
+.simple-notification {
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
