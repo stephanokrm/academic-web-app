@@ -1,6 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
 @import "../node_modules/materialize-css/dist/css/materialize.min.css";
 
+html, body {
+    font-size: 15px;
+    line-height: 1.5;
+    font-family: circular;
+    color: #222;
+    letter-spacing: 1px;
+}
+
+input {
+    border-radius: 4px !important;
+    font-size: 1.4em !important;
+    padding: 30px 16px !important;
+    -webkit-appearance: none !important;
+    -webkit-box-shadow: 0 0 32px rgba(0,0,0,.1) !important;
+    -moz-box-shadow: 0 0 32px rgba(0,0,0,.1) !important;
+    box-shadow: 0 0 32px rgba(0,0,0,.1) !important;
+    font-family: gt-pressura-mono !important;
+    background-color: white !important;
+    box-sizing: border-box !important;
+}
+
+.ng-dirty.ng-valid:not(form)  {
+    border-left: 5px solid #34A853;
+}
+
+.ng-dirty.ng-invalid:not(form)  {
+    border-left: 5px solid #EA4335;
+}
+
+.no-margin-top {
+    margin-top: 0 !important;
+}
+
 .btn-large {
     font-family: circular, sans-serif !important;
     text-transform: none !important;
@@ -21,4 +54,21 @@
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
     border-radius: 8px;
+}
+
+.navbar li a {
+    font-family: gt-pressura-mono;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 600px) {
+
+}
+
+@media screen and (min-width: 601px) and (max-width: 992px) {
+
+}
+
+@media screen and (min-width: 993px) {
+
 }

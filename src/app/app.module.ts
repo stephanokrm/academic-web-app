@@ -8,6 +8,7 @@ import {SimpleNotificationsModule} from 'angular2-notifications';
 import {UserService} from './users/user.service';
 import {HttpService} from './shared/services/http.service';
 import {TranslateService} from './shared/services/translate.service';
+import {StyleService} from './shared/services/style.service';
 import {AuthService} from './guards/auth.service';
 import {GuestService} from './guards/guest.service';
 
@@ -36,7 +37,8 @@ import {HomeComponent} from './shared/components/home/home.component';
         HttpService,
         TranslateService,
         AuthService,
-        GuestService
+        GuestService,
+        StyleService
     ],
     bootstrap: [AppComponent]
 })

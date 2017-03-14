@@ -23,6 +23,16 @@ export class UserService {
             .catch(this.handleError);
     }
 
+    public show(): Observable<Response> {
+        return this.httpService.get(Env.API + 'api/user')
+            .map(response => localStorage.setItem('user', JSON.stringify(response.json().user)))
+            .catch(this.handleError);
+    }
+
+    public getAuthenticated(): User {
+        return JSON.parse(localStorage.getItem('user'));
+    }
+
     public handleError(error: Response | any) {
         return Observable.throw(error.json());
     }
