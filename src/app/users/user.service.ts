@@ -8,25 +8,26 @@ import {User} from './user';
 @Injectable()
 export class UserService {
 
-    constructor(public httpService: HttpService) {
+    public constructor(public httpService: HttpService) {
     }
 
-    authenticate(user: User) {
+    public authenticate(user: User): Observable<Response> {
         return this.httpService.post(Env.API + 'oauth/token', user)
-            .map(response => {
-                localStorage.setItem('access_token', response.json().access_token);
-            })
+            .map(response => localStorage.setItem('access_token', response.json().access_token))
             .catch(this.handleError);
     }
 
-    store(user: User) {
+    public store(user: User): Observable<Response> {
         return this.httpService.post(Env.API + 'api/user/store', user)
             .map(response => response.json())
             .catch(this.handleError);
     }
 
-    handleError(error: Response | any) {
+    public handleError(error: Response | any) {
         return Observable.throw(error.json());
     }
 
+    public isAuthenticated(): boolean {
+        return localStorage.getItem('access_token') !== null;
+    }
 }
